@@ -26,19 +26,19 @@
 * **강제 원칙**: 오직 **물리적 눈에 보이는 팩트(Action Verbs & Physical Facts)**만 기술한다.
 
 ### 1-3. 프롬프트 본문 3대 요소 강제 집중 공식 (The 3-Pillar Staging Formula)
-모든 타임라인(`00-03s [Shot N]`) 문장은 오직 아래 **3가지 요소** 외에는 1글자도 적지 않는다:
-1. **[카메라]**: 렌즈(mm) + 정확한 앵글 및 물리적 무빙 (동시 클로즈업 충돌 시 점프컷 대신 반드시 `Whip-pan`, `Tracking Pan` 등 카메라 이동 문법 강제).
-2. **[인물 연기]**: 감정 형용사("슬프다", "화가 난다") 대신 얼굴 근육(저작근/눈빛), 시선 처리, 손/발의 물리적 이동 동사.
+모든 씬 플로우(`[Scene Flow]`) 문장은 오직 아래 **3가지 요소** 외에는 1글자도 적지 않는다:
+1. **[카메라 워크 & 전환]**: 직관적 카메라 앵글/무빙 및 전환 효과 (크래쉬 줌, 90도 오빗, 핸드헬드, 휩팬, 랙 포커스 등 장면에 맞춘 역동적 카메라 이동).
+2. **[인물 연기]**: 감정 형용사("슬프다", "화가 난다") 대신 얼굴 근육(저작근/눈빛), 시선 처리, 손/발의 물리적 이동 동사 및 구어체 대사.
 3. **[상대/주변 물리 반응]**: 상대방의 방어 동작(X자 가드 등), 물보라, 주변 기물의 상호작용 (멍때리거나 사라지지 않게 1:1 바운딩).
 
 ### 1-4. 외형 묘사 제로 & 극단 간결 역할·스케일 룰 (Zero Appearance & Scale-Only Role Rule)
-* 레퍼런스 이미지(`@태그`)가 있으면 외형(얼굴, 의상, 헤어)을 텍스트로 안 쓰는 것 자체가 완벽한 외형 락이다. `photo locked`, `strictly matches photo` 같은 군더더기 말도 일절 쓰지 않는다.
+* 레퍼런스 이미지(`@Image 1`, `@Image 2` 등)나 비디오(`@Video 1`)가 있으면 외형(얼굴, 의상, 헤어)을 텍스트로 안 쓰는 것 자체가 완벽한 외형 락이다. `photo locked`, `strictly matches photo` 같은 군더더기 말도 일절 쓰지 않는다.
 * `[Roles]`는 오직 **[극 중 역할]**과, 사진만으로 알 수 없는 **[물리적 크기/스케일]**만 2~3단어로 초간결하게 작성한다:
-  - *일반 인물*: `@mother: Protagonist mother.`
-  - *지휘관*: `@commander: Alien fleet commander.`
+  - *일반 인물*: `@Image 1: Protagonist male vlogger.`
+  - *배경 영상*: `@Video 1: Background street market scene.`
+  - *음식/소품*: `@Image 2: Hero Taiwanese grilled sausage.`
   - *거대 괴수/메카닉*: `@kraken: 120-meter giant octopus leviathan.` (크기/스케일 지정이 필요할 때만)
-  - *음식/소품*: `@promo_01: Banquet hero plate.`
-* 본문 타임라인 역시 옷/얼굴 묘사는 100% 영구 배제하고 오직 **카메라, 연기, 상대의 물리 반응**에만 집중한다.
+* 본문 `[Scene Flow]` 역시 옷/얼굴 묘사는 100% 영구 배제하고 오직 **카메라, 연기/대사, 물리적 상호작용 반응**에만 집중한다.
 
 ---
 
@@ -84,74 +84,63 @@
 
 ---
 
-# Part II. 프롬프트 표준 규격 & 연출 공통 수칙
+# Part II. 프롬프트 표준 규격 & 직관형 오가닉 연출 수칙 (Intuitive Organic Directing Rules)
 
-## 3. 프롬프트 레이아웃 및 7대 단일 표준 헤더 (Prompt Layout & Headers)
-비디오 생성기 입력용 프롬프트 파일(`projects/[프로젝트명]/prompts_[생성기].md`)은 **단 1개의 영구 통일 표준 규격**만을 사용합니다.
+## 3. 프롬프트 레이아웃 및 6대 오가닉 표준 헤더 (Organic Headers)
+비디오 생성기(Wan 3.0, Seedance 2.5, Runway, Kling 등) 입력용 프롬프트 파일(`projects/[프로젝트명]/prompts_[생성기].md`)은 인위적인 초 단위 족쇄와 복잡한 수식어를 걷어내고, **단 1개의 직관형 오가닉 표준 규격**만을 사용합니다.
 
-* **최상단 파트 넘버링 및 화면 비율(Aspect Ratio) 강제 명시**:
-  - 마크다운 코드 블록( ```markdown ~ ``` ) 내의 가장 첫째 줄은 무조건 **`Part-N [Aspect Ratio: 16:9]`** 또는 **`Part-N [Aspect Ratio: 9:16]`** 단일 규격으로 시작합니다.
-* **7대 영구 단일 표준 헤더 (Single-Word Standard Headers)**:
-  - 모든 파트는 아래 7개 헤더 외에 다른 변형 단어(`[Image References]`, `[Visual Vibe]` 등)를 절대 혼용하지 않고 오직 아래 7개 단어로 100% 통일합니다.
-    1. **`[Tags]`**: 생성기 UI에 매핑할 이미지 레퍼런스 태그 리스트 (`@young_chungmyung, @bg_gate...`)
+* **최상단 파트 넘버링 및 화면 비율(Aspect Ratio) 명시**:
+  - 마크다운 코드 블록( ```text ~ ``` ) 내의 가장 첫째 줄은 무조건 **`Part-N [Aspect Ratio: 16:9]`** 또는 **`Part-N [Aspect Ratio: 9:16]`** 단일 규격으로 시작합니다.
+* **6대 오가닉 단일 표준 헤더 (Organic Standard Headers)**:
+  - 복잡한 중복 헤더를 통합하고 오직 아래 6개 표준 헤더로 통일합니다.
+    1. **`[Tags]`**: 생성기 UI에 매핑할 이미지/비디오 레퍼런스 태그 리스트 (`@Image 1, @Image 2...`)
     2. **`[Roles]`**: 각 태그의 인물/배경 역할 1:1 바인딩
-    3. **`[Style]`**: 35mm 시네마틱 질감, 헐리우드 미학, 조명 및 톤앤매너
-    4. **`[Start State]`**: 00:00 클립 시작 시점의 카메라 앵글, 피사체 초기 위치 및 구도 앵커
-    5. **`[Timeline]`**: `00:00 - 00:14` 표준 샷(`[Shot N]`) 단위 무정지 카메라 워크 및 인물 액션
-    6. **`[End State]`**: 00:14 클립 종료 시점의 카메라 앵글 및 피사체 최종 상태 앵커
-    7. **`[Audio]`**: 순수 물리 효과음(SFX) 및 현장 환경음(Ambient) 전용
-    8. **`[Negative]`**: 로고, 워터마크, 텍스트, 자막, 왜곡, 어설픈 효과 배제
-* **대괄호 키워드 개행 개방**: 모든 속성 필드 사이에는 항상 **한 줄의 빈 개행 줄**을 주어 가독성을 높입니다.
+    3. **`[Style]`**: **질감(Texture 100%) & 톤/조명(Tone & Lighting 100%) 퍼센트(%) 분할 필수** (카메라 무빙 일절 기재 금지)
+    4. **`[Scene Flow]`**: **시간표(00-03s) 없는 자연스러운 연속 씬 서술** (각 씬마다 필요한 카메라 무빙 및 역동적 전환 현장 직접 지시)
+    5. **`[Audio]`**: 순수 물리 효과음(SFX), 현장음, 대사 전용 (BGM 일절 금지)
+    6. **`[Negative]`**: BGM, 자막, 워터마크, 3D 렌더, 왜곡 배제
 * **생성기별 글자 수 한도 의무화 (Strict Char Limit by Generator)**:
-  - `Wan 3.0`: **19,500자 미만** (최대 30초 지원, 안전 권장 19,000자 이내)
-  - `Seedance 2.5` (Artlist): **15,000자 이내** (안전 권장 14,000자 이내)
-  - `MiniMax H3` (Hailuo 3.0): **5,900자 미만** (안전 권장 5,500자 이내)
-  - `Seedance 2.0` (Artlist): **3,450자 미만** (안전 권장 3,300자)
-  - `Kling 3.0 Pro`: **2,450자 미만** (안전 권장 2,400자 이내)
+  - `Wan 3.0`: **19,500자 미만** (최대 30초 지원, 직관형 권장 3,000~8,000자 이내)
+  - `Seedance 2.5` (Artlist): **15,000자 이내** (직관형 권장 3,000~6,000자 이내)
+  - `MiniMax H3` (Hailuo 3.0): **5,900자 미만** (안전 권장 4,000자 이내)
+  - `Seedance 2.0` (Artlist): **3,450자 미만** (안전 권장 2,000자)
+  - `Kling 3.0 Pro`: **2,450자 미만** (안전 권장 2,000자 이내)
 
 ---
 
-## 4. 타임라인 단일 표준 작성 규격 ([Shot N] Format)
-모든 파트의 `[Timeline]` 영역은 컷/비트/샷의 혼용을 금지하고, 오직 아래의 **단일 표준 샷(`[Shot N]`) 포맷**만으로 100% 통일하여 작성합니다.
+## 4. `[Style]`의 '질감 vs 톤' 퍼센트(%) 분할 의무 헌법 (Percentage Style Rule)
+`[Style]` 영역에 모호한 영화적 수식어나 카메라 무빙을 섞어 기재하는 행위를 **100% 영구 금지**합니다. 
+AI의 신경망 주의력(Attention Weight)을 수학적으로 분리하기 위해 오직 **질감(Texture 100%)**과 **톤/조명(Tone & Lighting 100%)**의 지분을 퍼센트로 명확히 분할 기재합니다:
 
-* **단일 표준 타임라인 템플릿**:
-  ```markdown
-  00-03s [Shot 1: 카메라 앵글, 렌즈 및 무빙 지시]:
-  인물의 물리적 동선, 시선 처리, 배경 반응 묘사.
-  <물리 효과음 SFX, 현장 환경음 Ambient>
-
-  03-07s [Shot 2: 카메라 앵글, 렌즈 및 무빙 지시]:
-  다음 샷의 카메라 무빙과 인물 액션 묘사.
-  <물리 효과음 SFX, 현장 환경음 Ambient>
+* **단일 표준 [Style] 템플릿**:
+  ```text
+  [Style]
+  - Texture (질감 100%): 70% tactile physical 35mm film grain with natural skin pores and asphalt dust, 30% crisp high-shutter practical impact definition (0% plastic CGI render).
+  - Tone & Lighting (톤/조명 100%): 65% bright neutral daylight sun, 25% vibrant comic-book primary colors (saturated cobalt blue and crimson red), 10% high-contrast deep black shadows.
   ```
-* **표기 원칙 (카메라 전용 헤더 의무화)**:
-  - 불릿 기호(`-`)나 불필요한 초(`s`) 단위 없이 **`00-03s [Shot 1: 카메라 앵글/무빙]`** 단일 표준 형식으로 시작합니다.
-  - `[Shot N: ...]` 대괄호 내부에는 **오직 카메라 앵글/렌즈/무빙 지시어(예: Low-angle tracking push-in, 45-degree Dutch speed-ramp pan)**만 기재하며, **문학적 씬 제목이나 음악 비트 설명("160BPM BEAT 1 — HWANG MUNYAK BOW" 등)을 기재하는 행위를 100% 영구 금지**합니다.
-  - 샷 번호는 무조건 대괄호 `[Shot 1: ...]`, `[Shot 2: ...]`로 통일하며, `CUT`, `BEAT`, `Scene` 등의 단어를 혼용하지 않습니다.
-  - 각 샷 블록 아래에는 반드시 `<...>` 꺾쇠 괄호로 물리 효과음 트랙을 1:1 바인딩합니다.
+* **수칙**:
+  1. `Texture 100%`: 실사 아날로그 필름, 모공, 직물, 먼지 등 물리적 실사 비율 명시 (플라스틱 3D CG 0% 락).
+  2. `Tone & Lighting 100%`: 자연광, 인공 조명, 메인 컬러 팔레트, 그림자 콘트라스트 비율 명시.
+  3. **카메라 무빙 절대 배제**: 카메라 앵글과 무빙은 Style에서 100% 제외하고, 오직 아래 `[Scene Flow]`의 각 장면에서 현장 직접 지시합니다.
 
 ---
 
-## 5. 카메라 무빙, 몽타주 및 샷 제어 공식 (Camera & Montage Control)
-복잡한 움직임에서 발생하는 형태 뭉개짐(Morphing)을 차단하고 역동적인 화면 전환을 연출합니다.
+## 5. 자연스러운 씬 플로우 (`[Scene Flow]`) & 현장 카메라 무빙 연출 규칙
+초 단위(`00-03s`)로 컷을 잘게 쪼개어 AI의 연산을 구속하던 낡은 타임라인 족쇄를 폐기하고, 사건과 행동이 물 흐르듯 이어지는 **자연스러운 순차적 씬 플로우(`[Scene Flow]`)**를 사용합니다.
 
-* **1. 초단위 몽타주 분할 & 타임라인 내 샷 분할 의무화**:
-  - 복잡한 움직임이 섞인 씬은 3~5초 단위의 짧은 하드 컷으로 프롬프트를 쪼갭니다.
-  - `[Timeline]` 영역의 시간대 분할 작성 시, 단순히 행동 서사만 나열하지 말고 **모든 시간 단위 앞에 `[Shot 1: 앵글/샷 종류]`, `[Abrupt jump cut to Shot 2: 앵글/샷 종류]` 형식으로 개별 카메라 샷을 반드시 지정**해야 합니다. 이를 통해 AI가 하나의 롱테이크 프레임 안에서 모든 연출을 뭉개는 현상을 차단합니다.
-    - *예시*: `00:00–00:02 [Shot 1: Low-angle wide OTS]: ...`
-    - *예시*: `00:02–00:04 [Abrupt jump cut to Shot 2: Medium shot]: ...`
-  - *Camera 지시어*: `Strictly implement abrupt jump cuts instead of smooth transitions between the shots.`
-  - *Negative Constraints*: `no modern transition effects, no cross-dissolve, no morphing transitions.`
-* **2. 물리 동작의 정적 시작 규칙 (Static Starting State)**:
-  - 옷을 벗어 주거나 물건을 머리에 꽂는 등 AI가 렌더링하기 힘든 다관절 물리 행동은 형태 붕괴 오류를 차단하기 위해 연출을 간소화합니다.
-  - 동작의 중간 과정을 묘사하는 대신, **이미 완료된 상태(Static State)**로 장면을 시작합니다.
-    - *예시 (의류 전달)*: 민우가 재킷을 벗어주는 동작 $\rightarrow$ 처음부터 선희가 민우의 재킷을 어깨에 이미 덮고 있는 상태로 시작.
-    - *예시 (비녀 낙하)*: 인물의 손이 풀려 비녀가 떨어지는 동작 $\rightarrow$ 인물의 손을 배제하고 허공에서 비녀만 차가운 바닥으로 툭 떨어져 안착하는 클로즈업 샷으로 고정.
-* **3. 지상 눈높이 고정 지침 (Ground-Level Constraints)**:
-  - 인파가 많거나 넓은 공간 묘사 시 AI가 임의로 공중 앵글(하이 앵글)을 잡아 그래픽이 깨지는 현상을 차단합니다.
-  - 카메라 조작의 첫 단추를 반드시 지상 눈높이로 묶고, 공중 카메라 무빙을 부정 명령어로 완전히 배제합니다.
-    - *Camera 지시어*: `Strictly start from an eye-level ground view.`
-    - *Negative Constraints*: `strictly no aerial shot, no bird's-eye view, no high-angle shot, no drone shot.`
+* **표준 [Scene Flow] 작성 포맷**:
+  ```text
+  [Scene Flow]
+  1. [장면 1 도입 & 카메라 지정]: 카메라 앵글/무빙(예: wide static shot)과 함께 피사체의 초기 상태 및 배경 상황 직관적 서술.
+  2. [장면 2 사건 & 카메라/전환 지정]: 사건의 발생, 물리적 충돌, 필요한 카메라 무빙(예: rapid handheld crash-zoom in, 90-degree orbit) 및 전환 효과 서술.
+  3. [장면 3 인물 리액션 & 대사]: 인물의 표정 연기, 시선 처리, 대사 발화.
+     Dialogue: "대사 내용"
+  4. [장면 4 피날레]: 최종 액션 및 엔딩 카메라 구도.
+  ```
+* **현장 즉시 카메라 워크 & 역동적 전환 효과 복원 (Dynamic Transitions & Moves)**:
+  - 기계적인 하드 컷만 강제하지 않으며, 영상의 장르와 리듬감에 맞춰 **크래쉬 줌(Crash-Zoom), 90도 오빗 회전(Orbit Arc Shot), 랙 포커스(Rack Focus), 휩팬(Whip-Pan), 오브젝트 패싱 와이프(Object Pass Wipe)** 등 현장에 필요한 카메라 무빙과 전환 효과를 각 번호 씬에서 자유롭고 역동적으로 직접 지시합니다.
+* **직관적인 명령 언어 (Simple & Punchy Fact-First Directing)**:
+  - 복잡한 렌즈 광학 메타데이터나 문학적 비유("마치 폭풍 같은 분노")를 완전히 배제하고, **"누가 ➔ 어디서 ➔ 무슨 물리적 행동(착지, 타격, 줌, 미소)을 하고 ➔ 카메라는 어떻게 움직이는가"**의 명확한 팩트와 동사 중심으로 직관 서술합니다.
 
 ---
 
@@ -195,16 +184,16 @@ AI 비디오 모델은 부정 지시어(`No ...`, `Don't ...`)가 많을수록 �
 AI 비디오/오디오 모델의 오디오 파서 오작동을 차단하고 생생한 현장 효과음(SFX)을 유도하기 위해 다음 작성 규격을 엄격 준수합니다.
 
 * **1. 음악(BGM) 및 악기/BPM/드럼 단어 프롬프트 기재 100% 영구 금지 (Zero Music Word Rule)**:
-  - `[Style]`, `[Timeline]`, `[Audio]` 등 프롬프트 어디에도 `160 BPM`, `rock MV`, `drum crash`, `melody`, `brass`, `music`, `soundtrack` 같은 음악 관련 단어를 기재하는 행위를 **100% 영구 금지**합니다.
+  - `[Style]`, `[Scene Flow]`, `[Audio]` 등 프롬프트 어디에도 `160 BPM`, `rock MV`, `drum crash`, `melody`, `brass`, `music`, `soundtrack` 같은 음악 관련 단어를 기재하는 행위를 **100% 영구 금지**합니다.
   - 음악 단어가 1개라도 들어가는 순간, 비디오 AI의 오디오 엔진이 "BGM을 합성하라"는 명령으로 오해하여 지멋대로 엉뚱한 BGM/악기 소리를 생성하여 실제 OST 음원 합성을 100% 망치게 됩니다.
-  - `[Audio]` 필드와 Foley `<...>`에는 오직 **발걸음, 바람소리, 칼 부딪히는 소리 등 순수 물리 효과음(SFX)과 현장음(Ambient)**만 기재하며, `[Negative]`에 무조건 **`BGM, music, soundtrack, melody, instruments, singing`**을 명시합니다.
-* **2. 샷/비트 내부 1:1 배치 원칙 (Beat-Level Placement)**:
-  - `- Sound: <...>` 또는 `<...>` 오디오 지문 라인은 각 샷/비트 블록 내부의 동작 묘사 바로 아랫줄에 1:1로 정확히 배치합니다. 파트 최하단이나 코드 블록 외부에 흩뿌려 두지 않습니다.
+  - `[Audio]` 필드와 Foley `<...>`에는 오직 **발걸음, 바람소리, 칼 부딪히는 소리 등 순수 물리 효과음(SFX)과 현장음(Ambient), 캐릭터 대사(Dialogue)**만 기재하며, `[Negative]`에 무조건 **`BGM, music, soundtrack, melody, instruments, singing`**을 명시합니다.
+* **2. 씬 플로우 내부 1:1 배치 원칙 (Scene-Level Placement)**:
+  - Dialogue 및 Sound 지문 라인은 `[Scene Flow]` 내 각 번호 씬 블록 내부의 동작 묘사 바로 아랫줄에 1:1로 정확히 배치하거나 독립된 `[Audio]` 필드에 명확히 집약합니다.
 * **3. 풍부한 4~6단어 물리 SFX 묘사 수칙 (Rich Physical Sound Spec)**:
   - `<thud>`, `<flour poof>` 같은 단답형 1~2단어 표기를 엄금합니다. 장면 속 실제 물리 충돌, 마찰, 액체 분사, 열기 팽창 등 생생한 현장 동작을 묘사하는 **4~6단어 이상의 풍부한 물리 명사구/형용사구**로 기재합니다.
 * **4. `no BGM, Foley SFX only` 필수 주입 수칙 (Mandatory BGM Suppression)**:
   - 오디오 지문 태그 내 최후반에는 항상 **`no BGM, Foley SFX only`**를 필수로 포함하여 오디오 생성 엔진의 BGM 작곡 오작동을 이중 차단합니다.
-    - *예시*: `- Sound: <Heavy dough thud impact on wood, flour cloud poof, table vibration, no BGM, Foley SFX only>`
+    - *예시*: `Sound: <Heavy dough thud impact on wood, flour cloud poof, table vibration, no BGM, Foley SFX only>`
 
 ---
 
