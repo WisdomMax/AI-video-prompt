@@ -19,7 +19,8 @@ Cameraman: A thin Korean man in his late 40s with dyed blonde hair, holding a sm
 Monster: A colossal stone-skinned monster rampaging at a distant construction site.
 
 [Style]
-Live-action 35mm Hollywood superhero cinematography, bright clear daylight, practical dust and smoke, realistic human skin and fabric textures. High shutter speed capturing crisp impacts and physical debris.
+- Texture (질감 100%): 70% tactile physical 35mm film grain with natural skin pores and asphalt dust, 30% crisp high-shutter practical impact definition (0% plastic CGI render).
+- Tone & Lighting (톤/조명 100%): 65% bright neutral daylight sun, 25% vibrant comic-book primary colors (saturated cobalt blue and crimson red), 10% high-contrast deep black shadows.
 
 [Scene Flow]
 1. Camera opens on a wide static shot of @Image 1, showing a peaceful city road with cars and pedestrians moving calmly under bright sunlight.
