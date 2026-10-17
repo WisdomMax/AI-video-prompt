@@ -34,23 +34,24 @@
 ### 1-4. 외형 묘사 제로 & 극단 간결 역할·스케일 룰 (Zero Appearance & Scale-Only Role Rule)
 * 레퍼런스 이미지(`@Image 1`, `@Image 2` 등)나 비디오(`@Video 1`)가 있으면 외형(얼굴, 의상, 헤어)을 텍스트로 안 쓰는 것 자체가 완벽한 외형 락이다. `photo locked`, `strictly matches photo` 같은 군더더기 말도 일절 쓰지 않는다.
 * `[Roles]`는 오직 **[극 중 역할]**과, 사진만으로 알 수 없는 **[물리적 크기/스케일]**만 2~3단어로 초간결하게 작성한다:
-  - *일반 인물*: `@Image 1: Protagonist male vlogger.`
-  - *배경 영상*: `@Video 1: Background street market scene.`
-  - *음식/소품*: `@Image 2: Hero Taiwanese grilled sausage.`
-  - *거대 괴수/메카닉*: `@kraken: 120-meter giant octopus leviathan.` (크기/스케일 지정이 필요할 때만)
+  - *일반 인물*: `@protagonist: Lead detective.`
+  - *배경 영상*: `@background_video: Busy downtown intersection footage.`
+  - *소품/음식*: `@hero_prop: Key evidence briefcase.`
+  - *거대 크리처/메카닉*: `@kraken: 120-meter giant octopus leviathan.` (크기/스케일 지정이 필요할 때만)
 * 본문 `[Scene Flow]` 역시 옷/얼굴 묘사는 100% 영구 배제하고 오직 **카메라, 연기/대사, 물리적 상호작용 반응**에만 집중한다.
 
-### 1-5. 자의적 관능·육체 수식어 창작 & 과잉 영작 영구 금지 헌법 (Zero Sensual Fluff & Anti-Overengineering Rule) 🔴 절대 필수
-* **감독님의 직관적 워딩 왜곡 영구 금지**:
-  - 감독님이 "군침 흘리면서", "소세지 먹으러 왔다", "핸드헬드를 심하게"라고 명쾌하고 자연스럽게 지시하면, **그 의도와 말맛을 100% 그대로 반영**해야 한다.
-  - "일을 더 열심히 하는 척하겠다", "전문적으로 보이겠다"는 AI 특유의 썩은 허세로 자의적 각색을 하거나, `saliva(침)`, `juicy gulp(축축한 꿀꺽)`, `wet swallowing(침 삼키는 소리)`, `plump(통통한/육덕진)`, `micro-perspiration(땀 범벅)`, `raw` 등 **성인물(NSFW) 검열 모델이 발작을 일으키는 관능적·신체 분비물 영단어를 덧붙여서 안전 필터 차단(Blocked by AI)을 유발하는 자폭 행위를 100% 영구 금지**한다.
-* **최신 다국어 모델(Wan 3.0, Kling 등) 한국어 직관 디렉팅 원칙 (Korean-First Directing)**:
-  - Wan 3.0 등 최신 영상 AI는 한국어를 네이티브로 사람처럼 정밀하게 이해한다.
-  - 2~3년 전 구형 AI 시절의 낡은 관성에 갇혀 억지로 영문 번역을 거치다가 19금 은어 지뢰를 밟지 말아야 한다.
-  - 감독님이 주신 살아있는 한국어 자연어와 명확한 물리적 행동 동사를 최우선으로 존중하여 간결하고 깨끗하게 프롬프트를 구성한다.
-* **이미지 참조 대상에 관능적 수식어 포장 절대 금지**:
-  - 이미 `@Image 1`, `@Image 2`로 사진이 제공된 음식이나 사물에 `plump`, `juicy`, `glistening`, `charred skin` 따위의 수식어를 텍스트로 도배하지 않는다.
-  - 오직 `@Image 2의 소세지`, `@Image 2: Taiwanese grilled sausage`처럼 팩트만 건조하고 명확하게 기재한다.
+### 1-5. 원작자 의도 충실 & 과잉 수식어 증폭 금지 헌법 (Intent Fidelity & Anti-Embellishment Rule) 🔴 절대 필수
+* **원문 의도 1:1 보존 (Preserve Core Intent & Zero Speculative Expansion)**:
+  - 감독님이 지시한 자연어의 핵심 의도와 말맛을 1:1로 정확하게 계승한다.
+  - "디테일을 보강한다", "전문적으로 포장한다"는 명목으로 원문에 없는 주관적 수식어, 자극적이거나 관능적인 형용사, 불필요한 생체/육체적 묘사를 임의로 덧붙이는 과잉 각색(Hallucinatory Amplification)을 100% 영구 금지한다.
+* **성적 다의어 및 위험 어휘 원천 차단 (Zero Innuendo & Risk Vocabulary)**:
+  - 텍스트 번역 및 영문화 과정에서 성인물(NSFW) 안전 검열기가 오해할 수 있는 이중적 의미의 단어(Double Entendre), 신체 분비물 및 관능적 수식어를 원천 배제한다.
+  - 인물의 표정이나 행동을 묘사할 때는 감각적 형용사 대신 **명확한 물리적 행동 동사(Physical Action Verbs)**와 **객관적 사실 팩트**만으로 담백하고 명료하게 기술한다.
+* **다국어 네이티브 모델 언어 존중 (Multilingual Native Directing)**:
+  - Wan 3.0, Kling 등 최신 비디오 생성 모델은 한국어 자연어와 일상 구어체를 네이티브 수준으로 정밀하게 이해한다.
+  - 억지스러운 기계적 영문 번역으로 인한 뉘앙스 왜곡과 어휘 필터링 위험을 방지하기 위해, 감독님이 전달한 직관적인 한국어 디렉팅과 구어체 대사를 최우선으로 존중하여 반영한다.
+* **시각 참조 자산(Visual Assets) 수식어 잉여 배제**:
+  - 이미 레퍼런스 이미지나 영상(`@태그`)으로 외형이 확정된 인물, 소품, 배경, 음식에 형태적·감각적 수식어를 텍스트로 중복 기재하지 않는다. 오직 해당 자산의 [역할 명칭]과 [필요시 크기/스케일]만을 건조하고 명확하게 바인딩한다.
 
 ---
 
