@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Prompt Cookbook | 실전 AI 비디오 프롬프트 쿡북</title>
+  <link rel="stylesheet" href="css/cookbook.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="app-wrapper">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-icon">🎬</div>
+        <div>
+          <div class="brand-title">AI Video Prompt Cookbook</div>
+          <div class="brand-subtitle">실전 프로덕션 검증 AI 비디오 프롬프트 레시피 & 엔지니어링 쿡북</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <div class="search-input-box">
+          <span style="color: #64748b;">🔍</span>
+          <input type="text" id="search-input" placeholder="스킬, 키워드, 스타일 검색... (예: 숏드라마, 폰카, H3)">
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-pill">✨ 2026 실전 프로덕션 검증 완료 템플릿</div>
+      <h1>"이 기술을 이렇게 쓰는구나!"<br>보고 바로 써먹는 AI 비디오 마스터 레시피</h1>
+      <p>단순한 프롬프트 나열이 아닙니다. 왜 이 프롬프트가 성공하는지 <strong>'핵심 연출 비결(Secret Formula)'</strong>과 <strong>'핵심 지시어 스니펫'</strong>을 한눈에 배우고, 내 영상에 바로 복사해 사용하세요.</p>
+    </section>
+
+    <!-- Filter Tabs -->
+    <nav class="filter-tabs">
+      <button class="tab-btn active" data-category="all">🌟 전체 레시피</button>
+      <button class="tab-btn" data-category="motion">⚡ 타이포 & 모션그래픽 (H3)</button>
+      <button class="tab-btn" data-category="action">🥋 극실사 액션 & 숏드라마</button>
+      <button class="tab-btn" data-category="commercial">🛍️ 브랜드 TVC & 커머셜</button>
+      <button class="tab-btn" data-category="realistic">📱 폰카 & 다큐 리얼리즘</button>
+      <button class="tab-btn" data-category="anime">🎴 2D 애니 & 캐릭터 카드</button>
+    </nav>
+
+    <!-- Master Cards Grid -->
+    <main class="cards-grid" id="cards-grid">
+      <!-- Injected by JavaScript -->
+    </main>
+  </div>
+
+  <!-- Detail Slide-over Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <span class="badge" id="modal-badge">MiniMax H3</span>
+          <h2 style="font-size: 22px; font-weight: 800; color: #fff; margin-top: 8px;" id="modal-title">스킬 제목</h2>
+          <div style="font-size: 13.5px; color: var(--accent-purple); margin-top: 4px; font-weight: 600;" id="modal-subtitle">스킬 부제</div>
+        </div>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Secret Formula -->
+        <div>
+          <div style="font-size: 14px; font-weight: 700; color: #c084fc; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>💡</span> 프롬프트 핵심 성공 비결 (Secret Formula)
+          </div>
+          <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6;" id="modal-why">-</p>
+        </div>
+
+        <!-- Timeline Section -->
+        <div>
+          <div style="font-size: 14px; font-weight: 700; color: #f1f5f9; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+            <span>⏱️</span> 컷별 타임라인 스케치 (Timeline Breakdown)
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;" id="modal-timeline-box"></div>
+        </div>
+
+        <!-- Full Prompt Section -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="font-size: 14px; font-weight: 700; color: #f1f5f9;">📋 완성형 마스터 프롬프트 (Production Brief)</div>
+            <span style="font-size: 12px; color: var(--accent-cyan);" id="modal-char-count">총 1,240자</span>
+          </div>
+          <div class="full-prompt-area" id="modal-full-prompt"></div>
+          <button class="btn-copy" id="modal-copy-full-btn" style="width: 100%; justify-content: center; margin-top: 14px; padding: 12px; font-size: 14px;">
+            📋 완성형 프롬프트 전체 복사하기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-msg" id="toast-msg">📋 복사 완료!</div>
+
+  <!-- Scripts -->
+  <script src="js/skills-data.js"></script>
+  <script src="js/cookbook-app.js"></script>
+</body>
+</html>

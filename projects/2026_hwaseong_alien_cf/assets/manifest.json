@@ -1,0 +1,89 @@
+{
+  "assets": [
+    {
+      "tag": "@alien_squad",
+      "file": "alien_squad.png",
+      "description": "공식 마스코트 4종 기반 인간형 공룡 단체"
+    },
+    {
+      "tag": "@grandma_okboon",
+      "file": "grandma_okboon.png",
+      "description": "새 멋쟁이 할머니, 선글라스·코럴 재킷, 3분할"
+    },
+    {
+      "tag": "@reborn_youth",
+      "file": "reborn_youth.png",
+      "description": "매우 아름다운 20대 회춘 여성, 3분할"
+    },
+    {
+      "tag": "@alien_laser_rifle",
+      "file": "alien_laser_rifle.png",
+      "description": "크고 우람한 레이저 중화기, 투명 배경 스튜디오 샷"
+    },
+    {
+      "tag": "@alien_mothership",
+      "file": "alien_mothership.png",
+      "description": "제부도 갯벌 모선"
+    },
+    {
+      "tag": "@jebudo_mudflat",
+      "file": "jebudo_mudflat.png",
+      "description": "제부도 갯벌"
+    },
+    {
+      "tag": "@jeongok_marina",
+      "file": "jeongok_marina.png",
+      "description": "전곡항 마리나"
+    },
+    {
+      "tag": "@songsan_vineyard",
+      "file": "songsan_vineyard.png",
+      "description": "송산포도"
+    },
+    {
+      "tag": "@gojeongri_dino_site",
+      "file": "gojeongri_dino_site.png",
+      "description": "퇴적암에 노출된 알 껍질 단면"
+    },
+    {
+      "tag": "@gojeongri_boardwalk",
+      "file": "gojeongri_boardwalk.png",
+      "description": "화석산지 데크길 보조 참조"
+    },
+    {
+      "tag": "@hwaseong_cleanroom",
+      "file": "hwaseong_cleanroom.png",
+      "description": "공개 자료 기반 반도체 클린룸 재구성"
+    },
+    {
+      "tag": "@hwaseong_mural_emblem",
+      "file": "hwaseong_mural_emblem.png",
+      "description": "엔딩용 가상 벽화 세트, 공식 로고 합성 전 배경"
+    },
+    {
+      "tag": "@hwaseong_bi_logo",
+      "file": "bi_logo.png",
+      "description": "사용자 제공 공식 로고, 원본 그대로 후반 합성"
+    },
+    {
+      "tag": "@samsung_semiconductor_ext",
+      "file": "samsung_semiconductor_ext.png",
+      "description": "삼성전자 화성 V1 EUV 생산동 실제 외관 기준 · 자연광 실사 촬영 질감"
+    },
+    {
+      "tag": "@hyangnam_biovalley_ext",
+      "file": "hyangnam_biovalley_ext.png",
+      "description": "향남 대원제약 생산동·유리 사무동 실제 외관 기준 · 자연광 실사 촬영 질감"
+    },
+    {
+      "tag": "@gungpyeong_restaurant",
+      "file": "gungpyeong_restaurant.png",
+      "description": "궁평항횟집 실제 실내 기준, 붉은 의자·배기덕트·형광등과 회 한 상"
+    },
+    {
+      "tag": "@navigation_hud",
+      "file": "navigation_hud.png",
+      "description": "화성 X + 아시아 중심 반쪽 지구, 한반도 락온에서 오른쪽 반투명 검은 AR 창으로 연결, 큰 화성 글씨"
+    }
+  ]
+}

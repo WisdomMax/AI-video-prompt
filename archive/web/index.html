@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Prompt & Reference Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow FX -->
+  <div class="bg-glow"></div>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">🎬</span>
+        <div>
+          <h1 class="brand-title">AI Video Showcase</h1>
+          <p class="brand-sub">Master Prompt & 480p Reference Archive</p>
+        </div>
+      </div>
+
+      <!-- Search & Controls -->
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search prompts, models, tags..." autocomplete="off">
+        <span id="searchCount" class="search-badge">0</span>
+      </div>
+
+      <div class="header-actions">
+        <button id="inboxHelpBtn" class="btn-ghost" title="How to Add">
+          📥 <span>Inbox Guide</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="filter-bar">
+      <div class="filter-group" id="modelFilters">
+        <button class="filter-chip active" data-model="all">All Models</button>
+        <button class="filter-chip" data-model="Wan 3.0">Wan 3.0</button>
+        <button class="filter-chip" data-model="Kling 3.0 Pro">Kling 3.0 Pro</button>
+        <button class="filter-chip" data-model="MiniMax H3">MiniMax H3</button>
+        <button class="filter-chip" data-model="Seedance 2.5">Seedance 2.5</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Container -->
+  <main class="gallery-container">
+    <div id="videoGrid" class="video-grid">
+      <!-- Dynamically Rendered Video Cards -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state hidden">
+      <div class="empty-icon">📭</div>
+      <h3>No projects match your filter</h3>
+      <p>Try searching for a different keyword or check the inbox guide.</p>
+    </div>
+  </main>
+
+  <!-- Detail Modal -->
+  <div id="detailModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-content-layout">
+        <!-- Left: Video & Refs -->
+        <div class="modal-visual-pane">
+          <div class="video-player-wrapper">
+            <video id="modalVideo" controls loop playsinline preload="auto"></video>
+            <div id="modalVideoPlaceholder" class="video-placeholder hidden">
+              <span class="placeholder-icon">🎬</span>
+              <p>No video attached yet</p>
+            </div>
+          </div>
+
+          <!-- Reference Images Strip -->
+          <div class="refs-section" id="modalRefsSection">
+            <h4 class="section-title">Reference Assets (@Images)</h4>
+            <div id="modalRefsList" class="refs-strip"></div>
+          </div>
+        </div>
+
+        <!-- Right: Metadata & Prompt -->
+        <div class="modal-meta-pane">
+          <div class="modal-meta-header">
+            <div class="meta-badges">
+              <span id="modalModelBadge" class="badge badge-model">Wan 3.0</span>
+              <span id="modalCategoryBadge" class="badge badge-cat">Beauty</span>
+              <span id="modalDurationBadge" class="badge badge-sub">22s</span>
+              <span id="modalAspectBadge" class="badge badge-sub">16:9</span>
+            </div>
+            <h2 id="modalTitle" class="modal-title">Project Title</h2>
+            <div class="modal-date" id="modalDate">Added on 2026-09-19</div>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="prompt-box-header">
+            <span class="prompt-label">MASTER PROMPT</span>
+            <button id="copyPromptBtn" class="btn-copy">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">Copy Prompt</span>
+            </button>
+          </div>
+          <div class="prompt-content-wrapper">
+            <pre id="modalPrompt" class="prompt-text"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inbox Guide Modal -->
+  <div id="inboxModal" class="modal-overlay hidden">
+    <div class="modal-card modal-guide-card">
+      <button id="closeInboxGuideBtn" class="modal-close-btn">&times;</button>
+      <div class="guide-header">
+        <span class="guide-icon">📥</span>
+        <h2>How to Add New Videos & Prompts</h2>
+      </div>
+      <div class="guide-body">
+        <div class="guide-step">
+          <span class="step-num">1</span>
+          <div>
+            <h4>투척 (Drop in Inbox)</h4>
+            <p>프로젝트 폴더 내 <code>archive/inbox/</code> 디렉토리에 새 폴더를 만들거나 파일들을 넣으세요.<br>
+            (영상 파일, 레퍼런스 이미지 <code>@Image 1</code>, 프롬프트 텍스트 <code>prompt.txt</code>)</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">2</span>
+          <div>
+            <h4>명령 (Tell Antigravity)</h4>
+            <p>채팅창에 <em>"인박스에 있는 거 압축해서 정리해줘"</em>라고 말씀만 하시면 됩니다.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">3</span>
+          <div>
+            <h4>자동 완료 (Auto 480p & Index)</h4>
+            <p>에이전트가 <strong>480p(H.264, 3~5MB)로 초경량 압축</strong>하고 썸네일과 메타데이터를 추출해 이 웹 갤러리에 즉시 등록합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

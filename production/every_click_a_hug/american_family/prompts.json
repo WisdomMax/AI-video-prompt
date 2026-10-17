@@ -1,0 +1,42 @@
+[
+  {
+    "name": "01_mother_28_1969",
+    "family": "mother",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Age the reference mother to 28 in 1969. Chestnut short side parted bob. Ivory small collar cotton blouse, muted brown knee length A-line skirt, brown low shoes."
+  },
+  {
+    "name": "02_mother_35_1976",
+    "family": "mother",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same mother age 35 in 1976, preserve facial bone structure, hazel eyes and small mole below left eye. Chestnut shoulder length softly feathered hair. Muted ochre cotton blouse, dark brown modest flared trousers, brown flat shoes. Ordinary American family clothing."
+  },
+  {
+    "name": "03_mother_45_1986",
+    "family": "mother",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same mother age 45 in 1986, preserve facial bone structure, hazel eyes and small mole below left eye. Natural subtle aging, medium brown softly waved short hair. Dusty blue cardigan over ivory blouse, charcoal knee length skirt, plain dark flat shoes. Modest ordinary American family clothing, no exaggerated fashion."
+  },
+  {
+    "name": "04_mother_85_2026",
+    "family": "mother",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same mother age 85 in 2026, preserve recognizable facial bone structure, hazel eyes and small mole below left eye. Clear elderly features with realistic deep wrinkles, thinner lips and facial volume loss, soft short white gray hair, slight natural stoop, alert warm eyes. Dusty lavender cardigan, cream blouse, charcoal comfortable trousers, dark flat shoes."
+  },
+  {
+    "name": "05_son_57_2026",
+    "family": "son",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Fictional ordinary white American man age 57 in 2026, biological son of reference mother: resemble her gently hooded hazel eyes and oval facial structure, masculine rounded jaw, straight nose, short brown hair with gray temples. Pale blue shirt, navy casual lightweight jacket, charcoal trousers, dark loafers. Natural age lines, warm restrained expression. Standing reference pose, no car or driving action."
+  },
+  {
+    "name": "06_son_baby_1969",
+    "family": "son",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same male as reference, age regressed to 8 month old American baby in 1969, recognizable familial hazel eyes and fine light brown hair. Ivory cotton baby romper and plain knitted booties, modest period clothes. LEFT large baby face portrait, CENTER supported seated full body front, RIGHT supported seated full body rear on same unobtrusive low padded support. Baby never standing, anatomically age appropriate, no visible adult or car seat."
+  },
+  {
+    "name": "07_son_child_1977",
+    "family": "son",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same male as reference age regressed to 8 year old American boy in 1977, hazel eyes, light brown simple bowl inspired short haircut. Muted mustard and brown striped cotton crewneck shirt, brown corduroy straight trousers, plain worn canvas sneakers without logo. Ordinary family clothes, not costume."
+  },
+  {
+    "name": "08_son_teen_1986",
+    "family": "son",
+    "prompt": "Use case photorealistic-natural. One 16:9 landscape casting sheet with exactly three equal vertical panels: LEFT large face head-and-shoulders portrait, CENTER full body front head to shoes, RIGHT full body rear head to shoes. Same person and same outfit across panels. Outdoor photography studio plain warm light gray seamless background and floor, soft natural open shade daylight, true skin and fabrics, neutral stance, no vintage filter. No labels, text, watermark, logos, extra people, props or car. Same male as reference age regressed to 17 year old American boy in 1986, hazel eyes, short medium brown hair with natural slight feathering. Muted red blue plaid flannel shirt over plain ivory crewneck tshirt, straight medium wash jeans, plain neutral sneakers without logo. Ordinary family clothes, restrained period styling."
+  }
+]
